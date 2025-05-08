@@ -1,0 +1,230 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: #140021;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    margin: 0;
+    background-color: rgb(53, 20, 88);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+a {
+    font-weight: bold;
+    color: white;
+}
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+fieldset {
+    margin: 1.4em 0;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: rgb(53, 20, 88);
+    bottom: 0;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.navRight {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding-top: 0px;
+}
+
+.navList {
+margin: 0 15px;
+}
+
+.container {
+    flex: 1;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.cell {
+    padding: 10px;
+    width: 25%;
+    vertical-align: top;
+    font-size: 1.05em;
+    background: #2d1a40;
+    color: white;
+    border-radius: 20px;
+}
+
+.formContainer {
+    flex: 1;
+    width: 35%;
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+}
+.formContainer input {
+    font-size: 0.8em;
+}
+.innerTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+    
+.innerTable tr td,
+.innerTable tr th {
+    color: #e0e0e0;
+    padding: 8px;
+}
+    
+.innerTable tr th {
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    color: #ffffff;
+}
+.logoImg {
+    height: 50px;
+    width: 50px;
+}
+
+.centerText {
+    text-align: center;
+}
+.noUnderline {
+    text-decoration: none;
+}
+.error {
+    font-weight: normal;
+    color: red;
+}
+.formLabel {
+    display: inline-block;
+    margin-top: 1em;
+}
+.article {
+    border: 2px solid rgb(84, 32, 140);
+    border-radius: 15px;
+    background-color: #2d1a40;
+    width: 70%;
+    flex: 60%;
+    margin-left: auto;
+    padding: 20px;
+    margin-right: auto;
+}
+
+.saveBtn {
+    background-color: #4e228a;
+    color: white;
+    font-weight: bold;
+    margin-top: 1.5em;
+    padding: 5px 15px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.noMargin {
+    margin: 0;
+}
+.wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5em;
+    gap: 15px;
+}
+.buttonRow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+#detailTable {
+    margin-right: auto;
+    margin-left: auto;
+}
+.productTable {
+    border-spacing: 15px;
+}
+.productTable tr,
+.productTable th {
+    text-align: left;
+}
+
+#productImg {
+    object-fit: cover;
+    margin-left: 30px;
+    max-height: 12.1em;
+    border-radius: 10px;
+    width: 80%;
+}
+#detailTable tr,
+#detailTable td {
+    font-size: 1.1em;
+    padding: 7px 25px;
+    background-color: rgb(39, 32, 56);
+}
+.detailWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+#detailView,
+#imageView {
+    width: 48%;
+}
+#indexImg {
+    width: 15%;
+    height: auto;
+}
+#aboutWrapper {
+    display: flex;
+    gap: 30px;
+}
+
+#aboutLogo {
+    max-width: 400px;
+    align-self: center;
+    border-radius: 15px;
+}
+.saveBtn:hover .fa-heart {
+    color: red;
+}
+
+.saveBtn:hover .fa-cart-plus {
+    color: red;
+}
+
+.saveBtn:hover {
+    background-color: #59279f;
+    transform: scale(1.1);
+}
+.hover {
+    text-decoration: none;
+}
+
+.hover:hover {
+    text-decoration: underline;
+}
