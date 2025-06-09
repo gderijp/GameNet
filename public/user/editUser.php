@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-require 'db.inc.php';
+require_once '../config/db.inc.php';
 if (!isset($_SESSION['loggedInUser'])) {
-    header('Location: login.php');
+    header('Location: ../controllers/login.php');
 }
 
 function adminPageRow($conn)
@@ -16,7 +16,7 @@ function adminPageRow($conn)
     );
     $result = $stmt->fetch();
     if ($result->is_admin === 1) {
-        echo "<li class='navList'><a href='adminPage.php'><i class='fa-solid fa-user-tie' style='font-size:26px'></i></a></li>";
+        echo "<li class='navList'><a href='../admin/adminPage.php'><i class='fa-solid fa-user-tie' style='font-size:26px'></i></a></li>";
     }
 }
 
@@ -85,7 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gegevens wijzigen</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/noBgImg.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -93,23 +94,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <nav class="navContainer">
-        <a href="index.php"><img src="logo.png" alt="GameNet Logo" class="logoImg"></a>
+        <a href="../index.php"><img src="../images/logo.png" alt="GameNet Logo" class="logoImg"></a>
         <ul class="navRight">
-            <li class="navList"><a href="index.php"><i class="fa-solid fa-house" style='font-size:26px'></i></a></li>
-            <li class="navList"><a href="productPage.php"><i class="fa-solid fa-shop" style='font-size:26px'></i></a></li>
+            <li class="navList"><a href="../index.php"><i class="fa-solid fa-house" style='font-size:26px'></i></a></li>
+            <li class="navList"><a href="../productPage.php"><i class="fa-solid fa-shop" style='font-size:26px'></i></a></li>
             <li class="navList"><a href="favorites.php"><i class="fa-solid fa-heart" style='font-size:26px'></i></a></li>
-            <li class="navList"><a href="cart.php"><i class="fa-solid fa-cart-shopping" style='font-size:26px'></i></a></li>
+            <li class="navList"><a href="../controllers/cart.php"><i class="fa-solid fa-cart-shopping" style='font-size:26px'></i></a></li>
             <?php if (isset($_SESSION['loggedInUser'])) {
                 $navLink = 'profile.php';
             } else {
-                $navLink = 'login.php';
+                $navLink = '../controllers/login.php';
             } ?>
             <li class="navList"><a href="<?php echo $navLink ?>"><i class='fa-solid fa-user' style='font-size:26px'></i></a></li>
             <?php if (isset($_SESSION['user_id'])) {
                 adminPageRow($conn);
             } ?>
             <?php if (isset($_SESSION['loggedInUser'])) {
-                ?><li class="navList"><a href="logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+            ?><li class="navList"><a href="../controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -138,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <footer class="footer-container">
         <p>Copyright &copy; GameNet 2025</p>
-        <p><a href="about.php">About</a></p>
+        <p><a href="../about.php">About</a></p>
     </footer>
 </body>
 
