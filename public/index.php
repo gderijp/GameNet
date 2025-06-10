@@ -119,8 +119,8 @@ try {
                 adminPageRow($conn);
             } ?>
             <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
-            <?php
+                ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                <?php
             }
             ?>
         </ul>
@@ -131,11 +131,11 @@ try {
             <span class="centerText">
                 <?php if (isset($_SESSION['loggedInUser'])) { ?>
                     Welkom bij </span><img src='images/noBgImg.png' alt='GameNet Logo' id='indexImg'> <span>
-            <?php echo $_SESSION['username'] . "!</span>";
+                    <?php echo $_SESSION['username'] . "!</span>";
                 } else { ?>
                 Welkom bij </span>
             <img src='images/noBgImg.png' alt='GameNet Logo' id='indexImg'>!
-        <?php } ?>
+                <?php } ?>
         </div>
         <?php echo isset($error) ? "<p class='error'" . $error . "</p>" : '' ?>
 
@@ -195,7 +195,7 @@ try {
                                 </tr>
                             </table>
                         </td>
-                <?php
+                        <?php
                     }
                 } catch (PDOException $err) {
                     $error = $err->getMessage();
@@ -261,7 +261,7 @@ try {
                                 </tr>
                             </table>
                         </td>
-                <?php
+                        <?php
                     }
                 } catch (PDOException $err) {
                     $error = $err->getMessage();

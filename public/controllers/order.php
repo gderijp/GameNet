@@ -79,7 +79,7 @@ try {
                 adminPageRow($conn);
             } ?>
             <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                ?><li class="navList"><a href="logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -107,7 +107,7 @@ try {
                         <li>
                             <p><strong>Titel: </strong><?php echo $game . "<br><strong>Prijs: </strong>€$gamePrice->price"; ?></p>
                         </li>
-                <?php }
+                    <?php }
                 } ?>
             </ol>
         <?php }  ?>

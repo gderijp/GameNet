@@ -51,7 +51,7 @@ try {
             } ?>
             <li class="navList"><a href="<?php echo $navLink ?>"><i class='fa-solid fa-user' style='font-size:26px'></i></a></li>
             <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="../controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                ?><li class="navList"><a href="../controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -95,7 +95,7 @@ try {
                             </tr>
                         </table>
                     </td>
-            <?php
+                    <?php
                     $counter++;
 
                     if ($counter % 4 == 0) {

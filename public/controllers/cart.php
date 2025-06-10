@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
 
             if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                ?><li class="navList"><a href="logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -178,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             </tr>
                         </table>
                     </td>
-                <?php
+                    <?php
                     $counter++;
                     if ($counter % 4 == 0) {
                         echo "</tr>";
@@ -192,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form method="POST">
                 <button type="submit" name="placeOrder" class="saveBtn">Bestel!</button><?php echo !isset($_SESSION['loggedInUser']) ? "<small> (Log eerst in)</small>" : '' ?>
             </form>
-        <?php
+            <?php
         } else { ?>
             <p class="error">Je hebt nog niks aan je wagentje toegevoegd! <a href="../productPage.php" class="hover">Verder winkelen »</a></p>
         <?php }

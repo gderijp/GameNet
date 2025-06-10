@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 adminPageRow($conn);
             } ?>
             <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="../controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                ?><li class="navList"><a href="../controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 </tr>
                             </table>
                         </td>
-                <?php
+                        <?php
                         $counter++;
 
                         if ($counter % 4 == 0) {
@@ -168,10 +168,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 ?>
             </table>
-        <?php
+            <?php
         } else { ?>
             <p class="error">Je hebt nog niks aan je favorieten toegevoegd! <a href="../productPage.php" class="hover">Browse hier! »</a></p>
-        <?php
+            <?php
         }
         ?>
     </div>

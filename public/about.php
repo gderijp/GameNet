@@ -49,8 +49,8 @@ function adminPageRow($conn)
             <?php if (isset($_SESSION['user_id'])) {
                 adminPageRow($conn);
             } ?>
-            <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+            <?php if (isset($_SESSION['loggedInUser'])) { ?>
+                <li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -76,7 +76,8 @@ function adminPageRow($conn)
                 <h3>Contact</h3>
                 <p>Wil je contact met mij opnemen? <strong>Dat kan!</strong></p>
                 Email: <a href="mailto:gderijp@gmail.com">gderijp@gmail.com</a><br>
-                Telefoonnummer: <a href="tel:0648656328">06 48656328</a>
+                Telefoonnummer: <a href="tel:0648656328">06 48656328</a><br>
+                <a href="https://www.linkedin.com/in/gderijp" target="_blank">LinkedIn</a> - <a href="https://github.com/gderijp" target="_blank">GitHub</a>
             </article>
             <img src="images/logo.png" alt="Large website logo" id="aboutLogo">
         </div>

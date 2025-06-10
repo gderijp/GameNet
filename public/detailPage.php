@@ -121,7 +121,7 @@ try {
                 adminPageRow($conn);
             } ?>
             <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -183,7 +183,7 @@ try {
                         <?php }
                     } else { ?>
                         <button type="submit" name="addToCart" class="saveBtn">Voeg toe aan je mandje</button>
-                        <?php }
+                    <?php }
                     if (isset($_SESSION['favorites'])) {
                         if (!in_array($game->id, $_SESSION['favorites'])) { ?>
                             <button type="submit" name="addToFavorites" class="saveBtn">Voeg toe aan je favorieten</button>

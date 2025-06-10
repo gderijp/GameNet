@@ -25,17 +25,17 @@ function orderQry()
     }
 
     switch ($order) {
-        case 'title':
-            $qry = "SELECT * FROM games ORDER BY title ASC";
-            break;
-        case 'rating':
-            $qry = "SELECT * FROM games ORDER BY stars_rating DESC";
-            break;
-        case 'price':
-            $qry = "SELECT * FROM games ORDER BY price ASC";
-            break;
-        default:
-            $qry = "SELECT * FROM games ORDER BY id DESC";
+    case 'title':
+        $qry = "SELECT * FROM games ORDER BY title ASC";
+        break;
+    case 'rating':
+        $qry = "SELECT * FROM games ORDER BY stars_rating DESC";
+        break;
+    case 'price':
+        $qry = "SELECT * FROM games ORDER BY price ASC";
+        break;
+    default:
+        $qry = "SELECT * FROM games ORDER BY id DESC";
     }
 
     return $qry;
@@ -143,7 +143,7 @@ try {
                 adminPageRow($conn);
             } ?>
             <?php if (isset($_SESSION['loggedInUser'])) {
-            ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
+                ?><li class="navList"><a href="controllers/logout.php"><i class="fa-solid fa-right-from-bracket" style='font-size:26px'></i></a></li>
             <?php } ?>
         </ul>
     </nav>
@@ -212,7 +212,7 @@ try {
                             </tr>
                         </table>
                     </td>
-            <?php
+                    <?php
                     $counter++;
 
                     if ($counter % 4 == 0) {
