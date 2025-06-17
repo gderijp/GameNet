@@ -26,7 +26,7 @@ Als administrator zijnde is er in de navigatiebar een extra knop erbij: de Admin
 - __Frontend:__ CSS / FontAwesome
 
 ## Installatie
-1. Zorg ervoor dat je PHP, Apache en MySQL hebt (XAMPP)
+1. Zorg ervoor dat je PHP, Apache en een database als MySQL hebt (XAMPP)
 2. Clone lokaal dit project:
 
 ```
