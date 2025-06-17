@@ -30,7 +30,7 @@ Als administrator zijnde is er in de navigatiebar een extra knop erbij: de Admin
 2. Clone lokaal dit project:
 
 ```
-git@git.nexed.com:01919ce1-59d7-70ef-af71-c7b099f4828f/01958e6f-f01d-777f-a6b8-6a6687a702e1/Almost-there-29a94a06541c-9a20e92c9762.git
+https://github.com/gderijp/GameNet.git
 ```
 2. Importeer de `import.sql` bestand in je database omgeving
 
